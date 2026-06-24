@@ -3,6 +3,6 @@ on: push
 jobs:
   skip-or-run:
     if: ${{ github.actor == 'mimimizuno' }}
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Hello"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
