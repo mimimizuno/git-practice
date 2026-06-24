@@ -2,7 +2,7 @@ name: ls-test
 on: push
 jobs:
   ls:
-    runs-on: utbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: ls -la
