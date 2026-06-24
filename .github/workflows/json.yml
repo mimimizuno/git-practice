@@ -1,0 +1,9 @@
+name: JSON functions
+on: push
+jobs:
+  dump:
+    runds-on: ubuntu-latest
+    steps:
+      - run: echo "${CONTEXT}"
+        env:
+          CONTEXT: ${{ toJSON(github) }}
