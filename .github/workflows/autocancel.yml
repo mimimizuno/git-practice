@@ -1,6 +1,6 @@
 name: Auto cancel
 on: pull_request
-currency:
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 defaults:
