@@ -1,0 +1,14 @@
+name: Auto cancel
+on: pull_request
+currency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  sleep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: sleep 120
