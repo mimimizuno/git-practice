@@ -1,0 +1,19 @@
+name: Annotaion
+on: push
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  log:
+  runs-on: ubuntu-latest
+  timeout-minutes: 5
+  steps:
+    - run: echo "::error::This is an error"
+    - run: echo "::warning::This is a warning"
+    - run: echo "::notice::This is a notice"
